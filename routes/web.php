@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'client\HomeController@home');
+
+Route::get('/Home', 'client\HomeController@home');
