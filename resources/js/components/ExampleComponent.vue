@@ -35,7 +35,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted adscsad asd. asd')
+            console.log('Component mounted')
         },
         data() {
             return {
