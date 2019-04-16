@@ -18,11 +18,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="value in shop">
-                                    <td>{{value.id}}</td>
-                                    <td>{{value.employee_name}}</td>
-                                    <td>{{value.employee_age}}</td>
-                                </tr>
+                                
                             </tbody>
                         </table>
                     </div>
