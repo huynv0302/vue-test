@@ -1814,8 +1814,8 @@ __webpack_require__.r(__webpack_exports__);
     getData: function getData() {
       var _this = this;
 
-      axios.get('http://apidev.muabanhay.com/epark/public/api/shop/list?paginate=3').then(function (response) {
-        _this.shop = response.data.data;
+      axios.get('http://dummy.restapiexample.com/api/v1/employees').then(function (response) {
+        _this.shop = response.data;
       }).catch(function (error) {});
     }
   }
@@ -36889,9 +36889,9 @@ var render = function() {
                   return _c("tr", [
                     _c("td", [_vm._v(_vm._s(value.id))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(value.name))]),
+                    _c("td", [_vm._v(_vm._s(value.employee_name))]),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(value.address))])
+                    _c("td", [_vm._v(_vm._s(value.employee_age))])
                   ])
                 }),
                 0
@@ -36914,7 +36914,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("name")]),
         _vm._v(" "),
-        _c("th", [_vm._v("address")])
+        _c("th", [_vm._v("age")])
       ])
     ])
   }

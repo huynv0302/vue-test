@@ -14,14 +14,14 @@
                                 <tr>
                                     <th>id</th>
                                     <th>name</th>
-                                    <th>address</th>
+                                    <th>age</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr v-for="value in shop">
                                     <td>{{value.id}}</td>
-                                    <td>{{value.name}}</td>
-                                    <td>{{value.address}}</td>
+                                    <td>{{value.employee_name}}</td>
+                                    <td>{{value.employee_age}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -48,9 +48,9 @@
         },
         methods: {
            getData(){
-               axios.get('http://apidev.muabanhay.com/epark/public/api/shop/list?paginate=3')
+               axios.get('http://dummy.restapiexample.com/api/v1/employees')
                .then(response => {
-                   this.shop = response.data.data;
+                   this.shop = response.data;
                })
                .catch(error => {
 
