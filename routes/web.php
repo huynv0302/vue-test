@@ -12,5 +12,5 @@ Route::get('test',function(){
     return view('client.mobile.home');
 });
 Route::get('json', function(){
-    return response()->json(['data' => 'hello h']);
+    return response()->json(['data' => 'hello']);
 });
