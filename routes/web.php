@@ -11,3 +11,6 @@ Route::get('logout', 'client\AccountController@logout');
 Route::get('test',function(){
     return view('client.mobile.home');
 });
+Route::get('json', function(){
+    return response()->json(['data' => 'hello']);
+});
