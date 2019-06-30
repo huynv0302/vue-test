@@ -1779,9 +1779,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log('Component mounted.');
+    console.log('Component mounted hello asd');
+  },
+  data: function data() {
+    return {
+      message: 'say hello hhh',
+      shop: {}
+    };
+  },
+  created: function created() {
+    this.getData();
+  },
+  methods: {
+    getData: function getData() {
+      var _this = this;
+
+      axios.get('http://dummy.restapiexample.com/api/v1/employees').then(function (response) {
+        _this.shop = response.data;
+      }).catch(function (error) {});
+    }
   }
 });
 
@@ -36848,6 +36880,22 @@ var staticRenderFns = [
               _vm._v(
                 "\n                    I'm an example component.\n                "
               )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body" }, [
+              _c("table", { staticClass: "table" }, [
+                _c("thead", [
+                  _c("tr", [
+                    _c("th", [_vm._v("id")]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v("name")]),
+                    _vm._v(" "),
+                    _c("th", [_vm._v("age")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tbody")
+              ])
             ])
           ])
         ])
